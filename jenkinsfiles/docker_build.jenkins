@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
-                	sh 'docker build -t kate/toolbox:latest . '
+                	sh 'sudo docker build -t kate/toolbox:latest . '
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push kate/toolbox:latest
+                sudo docker push kate/toolbox:latest
                 '''
             }
         }
