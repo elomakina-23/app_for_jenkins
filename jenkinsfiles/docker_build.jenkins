@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push elomakina/docker-repo:latest
+                docker push elomakina/docker-repo:myfirstimagepush
                 '''
             }
         }
